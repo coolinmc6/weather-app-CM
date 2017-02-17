@@ -130,8 +130,11 @@ the parts that he discusses that.  I don't quite understand why my app's Bootstr
 styling doesn't seem to be coming through 100% (the button looks off) but the `container`
 spacing and input styling has.
 
-- Start on L58
+- Finished L58
+- Using my API key, I get a status 200 back with data for the cities that I entered.  I am 
+still getting an error around my reducer but that's just because I haven't built a reducer yet.
 
+- Start L59
 
 
 

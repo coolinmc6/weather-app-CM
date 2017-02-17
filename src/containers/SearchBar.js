@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchWeather } from '../actions/index';
 
-export default class SearchBar extends Component {
+class SearchBar extends Component {
 	constructor(props) {
 		super(props)
 
@@ -17,6 +20,11 @@ export default class SearchBar extends Component {
 
 	onFormSubmit(e) {
 		e.preventDefault();
+
+		// NOTE: this is a perfect example of when you need component state BUT Redux does not
+		// need to know what the state is.
+		this.props.fetchWeather(this.state.term);
+		this.setState({ term: '' });
 	}
 
 	render() {
@@ -35,4 +43,11 @@ export default class SearchBar extends Component {
 	}
 }
 
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({ fetchWeather}, dispatch);
+}
+
+// we pass in null first because it saying that we don't need mapStateToProps, or more specifically, 
+// we don't need to tough Redux state
+export default connect(null, mapDispatchToProps)(SearchBar)
 
