@@ -130,14 +130,19 @@ the parts that he discusses that.  I don't quite understand why my app's Bootstr
 styling doesn't seem to be coming through 100% (the button looks off) but the `container`
 spacing and input styling has.
 
-- Finished L58
 - Using my API key, I get a status 200 back with data for the cities that I entered.  I am 
 still getting an error around my reducer but that's just because I haven't built a reducer yet.
 
-- Start L59
+- Redux-Promise can stop or manipulate actions before they hit reducers.  Redux-Promise looks specifically
+for the payload property, if it's a promise, it stops the action entirely and then once the request finishes,
+it dispatches an action of the same type.  In other words, it unwraps the promise.
+  - stops the action, waits until the promise resolves, and now it sends that to the reducer
+- ~8:50 has a diagram of the flow
+- Gist => if the action has a promise, it stops the action and waits for the promise to resolve and then
+issues a new action through to the reducer
 
-
-
+- finished L60
+- Add OpenWeather API before starting again
 
 
 
