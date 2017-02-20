@@ -2,7 +2,7 @@
 
 ## Introduction
 This repo is based off of Stephen Grider's [Modern React and Redux](#) course from Udemy.
-The app was built using the create-react-app CLI and its purpose is to run through a slightly more advanced Redux example that utilizes middleware.  See the app in action [here](https://coolinmc6.github.io/weather-app-CM/).
+The app was built using the create-react-app CLI and its purpose is to run through a slightly more advanced Redux example that utilizes middleware.
 
 ## List of Packages and Associated Commands:
 ```sh
@@ -18,8 +18,21 @@ npm install --save redux-promise
 # Axios => allows us to make API calls
 npm install --save axios
 
+# Sparklines
+npm install --save react-sparklines
+
+# Lodash
+npm i --save lodash
 
 ```
+
+## Lessons Learned
+- Redux-Promise: In short, it's allowing me to better handle asynchronous responses as my action 
+returns a promise.  It allows me to halt the action until I receive the results of that promise 
+which is the data for my weather app.
+- Action-Reducer-Container flow: see Lecture 63 notes for a more in-depth discussion of how we break out
+the data we receive
+- Map vs. Filter: good discussion on these
 
 ## Set-up
 - These are the basic steps I followed to build the app:
@@ -242,4 +255,4 @@ importing CSS:
 ```js
 import styles from './style/styles.css';
 ```
-- finish L65, start L66 next
+- Finished
