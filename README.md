@@ -2,7 +2,7 @@
 
 ## Introduction
 This repo is based off of Stephen Grider's [Modern React and Redux](#) course from Udemy.
-The app was built using the create-react-app CLI and its purpose is to run through a slightly more advanced Redux example that utilizes middleware.
+The app was built using the create-react-app CLI and its purpose is to run through a slightly more advanced Redux example that utilizes middleware.  See the app in action [here](https://coolinmc6.github.io/weather-app-CM/).
 
 ## List of Packages and Associated Commands:
 ```sh
