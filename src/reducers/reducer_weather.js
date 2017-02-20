@@ -6,8 +6,9 @@ export default function(state = [], action) {
 			// the line below inserts our data to the front of the array; this avoids mutating the array
 			return [action.payload.data, ...state]
 			// return state.concat([action.payload.data]);
-
+		default:
+			return state;	
 	}
-	return state;
+	
 }
 
